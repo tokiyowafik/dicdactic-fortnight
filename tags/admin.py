@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Tags
+from .models import Tag
 
 
-@admin.register(Tags)
+@admin.register(Tag)
 class TagsAdmin(admin.ModelAdmin):
     list_display = ['label']
