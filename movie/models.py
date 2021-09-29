@@ -4,6 +4,9 @@ from django.db import models
 class Genre(models.Model):
     title = models.CharField(max_length=255)
 
+    def __str__(self) -> str:
+        return self.title
+
 
 class Movie(models.Model):
     RATE_G = 'G'
@@ -22,3 +25,6 @@ class Movie(models.Model):
     director = models.CharField(max_length=255)
     rate = models.CharField(max_length=4, choices=RATE_CHOICES, default=RATE_G)
     genres = models.ManyToManyField(Genre)
+
+    def __str__(self) -> str:
+        return self.title
