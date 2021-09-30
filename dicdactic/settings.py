@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'movie',
     'movie_custom',
-    'tags'
+    'tags',
+    'playground'
 ]
 
 MIDDLEWARE = [
